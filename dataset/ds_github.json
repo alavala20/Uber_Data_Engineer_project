@@ -1,0 +1,27 @@
+{
+	"name": "ds_github",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lk_github",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"f_file": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "alavala20/Uber_Data_Engineer_project/refs/heads/main/Data/@{dataset().f_file}",
+					"type": "Expression"
+				}
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
